@@ -1,9 +1,10 @@
 import asyncio
 import random
 
-class Osoba(ime,id):
+class Person:
+  def __init__(self, name, id):
     self.ime = ime
-    self.id = random
+    self.id = random.seed(10)
 
 odgovor = input("Želite li zaprimiti obrazac? Da(d)/Ne(n)")
 
@@ -11,8 +12,11 @@ odgovor = input("Želite li zaprimiti obrazac? Da(d)/Ne(n)")
 if odgovor=="d":
     with open('imena.txt') as f:
         imena = f.readlines()
-        print(imena)
 
+    for x in imena:
+        p = Person(imena(x), id)
+
+        print(p)
 
 
 
