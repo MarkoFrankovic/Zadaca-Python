@@ -6,6 +6,10 @@ class Person:
     self.ime = ime
     self.id = random.seed(10)
 
+def __str__(self):
+    return f"{self.name}({self.age})"    
+
+
 odgovor = input("Želite li zaprimiti obrazac? Da(d)/Ne(n)")
 
 #citanje imena iz filea
