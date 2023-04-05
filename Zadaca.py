@@ -5,29 +5,42 @@ import random
     #self.name = name
     #self.age = age
 
-with open('imena.txt') as f:
-    lines = f.readlines()
+odgovor = input("Želite li zaprimiti obrazac? Da(d)/Ne(n)")
 
-async def random_sleep(counter: float) -> None:
-    delay = random.random() * 5
-    print(f"{counter} sleeps for {delay:.2f} seconds")
-    await asyncio.sleep(delay)
-    print(f"{counter} awakens, refreshed")
-
-
-async def sleepers(how_many: int = 5) -> None:
-    print(f"Creating {how_many} tasks")
-    tasks = [asyncio.create_task(random_sleep(i)) for i in range(how_many)]
-    print(f"Waiting for {how_many} tasks")
-    await asyncio.gather(*tasks)
-
-
-if __name__ == "__main__":
-    asyncio.run(sleepers(5))
-    print("Done with the sleepers")
+#citanje imena iz filea
+if odgovor=="d":
+    with open('imena.txt') as f:
+        imena = f.readlines()
+        print(imena)
 
 
 
+
+
+
+
+
+#funkcije za sleep
+    async def random_sleep(counter: float) -> None:
+        delay = random.random() * 5
+        print(f"{counter} sleeps for {delay:.2f} seconds")
+        await asyncio.sleep(delay)
+        print(f"{counter} awakens, refreshed")
+
+
+    async def sleepers(how_many: int = 5) -> None:
+        print(f"Creating {how_many} tasks")
+        tasks = [asyncio.create_task(random_sleep(i)) for i in range(how_many)]
+        print(f"Waiting for {how_many} tasks")
+        await asyncio.gather(*tasks)
+
+
+else:
+        print("Žao nam je. Morati će te upotrijebiti drugi program.")
+
+#if __name__ == "__main__":
+    #asyncio.run(sleepers(5))
+    #print("Done with the sleepers")
 
 """
 Napraviti Python kod koji će:
