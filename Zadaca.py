@@ -2,8 +2,8 @@ import asyncio
 import random
 
 class Osoba(ime,id):
-    self.name = name
-    self.age = age
+    self.ime = ime
+    self.id = random
 
 odgovor = input("Želite li zaprimiti obrazac? Da(d)/Ne(n)")
 
