@@ -1,9 +1,9 @@
 import asyncio
 import random
 
-#class Osoba(self, ime, age):
-    #self.name = name
-    #self.age = age
+class Osoba(ime,id):
+    self.name = name
+    self.age = age
 
 odgovor = input("Želite li zaprimiti obrazac? Da(d)/Ne(n)")
 
@@ -12,10 +12,6 @@ if odgovor=="d":
     with open('imena.txt') as f:
         imena = f.readlines()
         print(imena)
-
-
-
-
 
 
 
